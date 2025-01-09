@@ -33,6 +33,92 @@ When you click the **Knit** button a document will be generated that includes bo
 ```{r cars}
 summary(cars)
 ```
+```{r}
+library(ggplot2)
+data<- data.frame(x = rnorm(100), y= rnorm(50))
+ggplot(data, aes(x = x,y= y))+
+  geom_point()+
+  labs(tittle = "point titik" , x = "sumbu x", y = "sumbu y")+
+  theme_classic()
+```
+
+```{r}
+data <- data.frame(x = rnorm(100),y=rnorm(100), grup = sample (c("A","B","C","D"),100,replace = TRUE))
+ggplot(data, aes(x = x, y = y, color = grup))+
+  geom_point()+
+  facet_wrap("grup")+
+  scale_color_manual(values =c("A" = "blue", "B" = "red", "C" = "yellow", "D" = "black" ))+
+  theme_dark()+
+  labs(tittle = "plot titik dengan warna berdasarkan grup",
+       x= "nilai x",
+       y= "nilai y",
+       color= "grup")
+```
+```{r}
+library(readr)
+lizard <- read.csv("lizards.csv")
+View(lizard)
+```
+```{r}
+library(ggplot2)
+ggplot(lizard, aes(x = total_length, y = weight))+
+  geom_point()
+labs(title = "plot titik", x = "total length", y = "weight")+
+  theme_classic()
+```
+```{r}
+ggplot(lizard,aes(x=total_length, y=common_name))+
+  geom_jitter()+
+  labs(title="plot titik-titik lizard",x="total length", y="common name")
+
+```
+```{r}
+ggplot(lizard,aes(x=total_length, y=common_name))+
+  geom_line()+
+  labs(title="plot titik-titik lizard",x="total length", y="common name")
+```
+```{r}
+ggplot(lizard,aes(x=total_length))+
+  geom_histogram()+
+  labs(title="plot titik-titik lizard",x="total length")
+```
+```{r}
+ggplot(lizard,aes(y=common_name))+
+  geom_bar()+
+  labs(title="plot bar lizard",x="total length", y="common name")
+```
+```{r}
+ggplot(lizard,aes(x=weight))+
+  geom_histogram(color = "red" , size =2, shape =16, fill= "blue", linetype = "dotted")+
+  labs(title="plot titik-titik lizard",x="weight")
+```
+```{r}
+library(readr)
+lizard <- read.csv("lizards.csv")
+View(lizard)
+```
+```{r}
+library(ggplot2)
+ggplot(lizard, aes(x = total_length, y = weight))+
+  geom_point(color="blue", shape= 8)
+labs(title = "plot titik", x = "total length", y = "weight")+
+  theme_classic()
+```
+```{r}
+library(readr)
+lizard <- read.csv("lizards.csv")
+View(lizard)
+```
+```{r}
+library(ggplot2)
+ggplot(lizard, aes(x = total_length, y = weight, color = common_name))+
+  geom_point(shapes=9)
+labs(title = "plot titik", x = "total length", y = "weight")+
+  theme_classic()
+```
+
+
+
 
 ## Including Plots
 

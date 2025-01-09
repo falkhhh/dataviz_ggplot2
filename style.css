@@ -7,21 +7,21 @@ output: html_document
 
 <style>
   body {
-    background-color: #6a0dad; /* Warna latar belakang ungu */
-    color: #ffffff; /* Warna teks putih */
+    background-color: #121212; /* Warna latar belakang gelap*/
+    color: #E0E0E0; /* Warna teks terang */
   }
-  
+
   h1 {
-    color: #ffccff; /* Warna judul (pink muda) */
+    color:  #FFFFFF; /* Warna judul (putih) */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Bayangan teks untuk judul */
   }
   
   h2, h3 {
-    color: #e0b0ff; /* Warna sub-judul (ungu muda) */
+    color: #3700B3; /* Warna sub-judul (ungu muda) */
   }
   
   a {
-    color: #ffccff; /* Warna tautan (pink muda) */
+    color: #3700B3; /* Warna tautan (pink muda) */
     text-decoration: underline; /* Garis bawah tautan */
   }
   
