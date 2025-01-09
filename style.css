@@ -1,0 +1,43 @@
+---
+title: "Dokumen dengan Tema Ungu"
+author: "Nama Anda"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+<style>
+  body {
+    background-color: #6a0dad; /* Warna latar belakang ungu */
+    color: #ffffff; /* Warna teks putih */
+  }
+  
+  h1 {
+    color: #ffccff; /* Warna judul (pink muda) */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Bayangan teks untuk judul */
+  }
+  
+  h2, h3 {
+    color: #e0b0ff; /* Warna sub-judul (ungu muda) */
+  }
+  
+  a {
+    color: #ffccff; /* Warna tautan (pink muda) */
+    text-decoration: underline; /* Garis bawah tautan */
+  }
+  
+  p {
+    font-family: 'Arial', sans-serif; /* Font untuk paragraf */
+  }
+</style>
+
+## Selamat Datang
+
+Ini adalah contoh dokumen R Markdown dengan tema ungu. Anda dapat menambahkan teks, gambar, dan analisis data di sini.
+
+### Contoh Tautan
+
+Silakan kunjungi [Google](https://www.google.com) untuk mencari informasi lebih lanjut.
+
+### Contoh Gambar
+
+![Contoh Gambar](https://via.placeholder.com/150)
