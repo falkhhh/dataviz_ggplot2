@@ -131,3 +131,52 @@ plot(pressure)
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
 # Referensi
+
+```{r}
+library(gapminder)
+library(ggplot2)
+library(gganimate)
+
+data=gapminder
+data
+```
+```{r}
+ggplot(data, aes(x = gdpPercap, y = lifeExp)) + geom_point(color = "blue", shape = 6)+
+  labs(title = "gapminder", x = "GDP", y = "life expectancy")
+```
+
+```{r}
+gapminder_plot<-ggplot(
+  gapminder,
+  aes(x = gdpPercap, y = lifeExp)
+)+
+geom_point (alpha = 0.6)+
+  scale_x_log10()+
+  labs(x = "GDP per capita", y = "Life expectancy")
+gapminder_plot
+```
+
+```{r}
+gapminder_plot<-ggplot(
+  gapminder,
+  aes(x = gdpPercap, y = lifeExp, size = pop, color = continent)
+)+
+geom_point (alpha = 0.6)+
+  scale_x_log10()+
+  scale_color_viridis_d(option="inferno")+
+  labs(x = "GDP per kapita", y = "Life experiency")
+gapminder_plot
+```
+
+```{r}
+gapminder_plot<-ggplot(
+  gapminder,
+  aes(x = gdpPercap, y = lifeExp, size = pop, color = continent)
+)+
+geom_point (alpha = 0.6)+
+  scale_x_log10()+
+  scale_color_viridis_d(option="inferno")+
+  labs(x = "GDP per kapita", y = "Life experiency")
+gapminder_plot
+```
+
